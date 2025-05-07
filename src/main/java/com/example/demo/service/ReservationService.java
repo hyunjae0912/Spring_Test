@@ -19,9 +19,6 @@ public interface ReservationService {
 	ReservationDTO read(int no);
 	
 	
-	
-	
-	
 	default Reservation dtoToEntity(ReservationDTO dto) {
 		
 		Reservation reservation = 

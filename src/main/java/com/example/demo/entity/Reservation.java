@@ -2,9 +2,6 @@ package com.example.demo.entity;
 
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-
-import org.springframework.data.annotation.CreatedDate;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

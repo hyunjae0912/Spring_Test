@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-import java.security.Principal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.dto.ReservationDTO;
 import com.example.demo.service.ReservationService;
@@ -49,7 +47,7 @@ public class ViewController {
 	
 	// 등록 처리하기
 	@PostMapping("/register")
-	public String registerPost(ReservationDTO dto, RedirectAttributes redirectAttributes) {
+	public String registerPost(ReservationDTO dto) {
 		System.out.println(dto);
 	    service.register(dto);
 	    return "redirect:/Reservation/list"; // 목록으로 리다이렉트
